@@ -8,6 +8,6 @@ stages:
   - name: deploy ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH} environment
     steps:
     - applyYamlConfig:
-        path: ./k8s-yaml/flask-deployment.yaml
+        path: ./k8s-yaml/laravel-deployment.yaml
     - applyYamlConfig:
-        path: ./k8s-yaml/flask-service.yaml
+        path: ./k8s-yaml/laravel-service.yaml
