@@ -1,5 +1,5 @@
 stages:
-  - name: Publish flask image
+  - name: Publish laravel image
     steps:
     - publishImageConfig:
         dockerfilePath: ./Dockerfile
