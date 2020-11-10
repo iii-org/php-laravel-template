@@ -86,10 +86,10 @@ RUN apk del -f .build-deps
 WORKDIR /var/www
 
 # create laravel latest version project
-RUN composer create-project --prefer-dist laravel/laravel blog
-
-# change to project directory
-WORKDIR /var/www/blog
+COPY src /var/www
+RUN composer install
+RUN cp .env.example .env
+RUN php artisan key:generate
 
 # Run service
 EXPOSE 80
